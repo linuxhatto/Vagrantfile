@@ -1,8 +1,7 @@
 Vagrant.configure(2) do |config|
   config.vm.box = "hashicorp/precise64"
    config.vm.define :client do |v|
-    v.vm.network :hostonly, "192.168.33.10"
-    v.vm.host_name = "chefserver.vagrant.local"
+    v.vm.hostname = "node"
   end
   
   config.vm.provision "shell", path: "script.sh"
