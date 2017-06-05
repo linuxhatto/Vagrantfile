@@ -4,5 +4,10 @@ Vagrant.configure(2) do |config|
   config.vm.provider "virtualbox" do |vb|
     vb.memory = 512
     vb.cpus = 1
+    config.vm.define :client do |v|
+    v.vm.network :hostonly, "192.168.99.102"
+    v.vm.host_name = "chef-master"
   end
+  
+  
   end
