@@ -9,8 +9,9 @@ cat <<EOK > ~/chef-repo/.chef/knife.rb
 current_dir = File.dirname(__FILE__)
 log_level                :info
 log_location             STDOUT
-node_name                "fabio"
-client_key               "#{current_dir}/fabio.pem"
 chef_server_url          "https://chef-master/organizations/level3"
 cookbook_path            ["#{current_dir}/../cookbooks"]
+validation_client_name   "level3-validator"
 EOK
+
+chef-client -c /root/chef-repo/.chef/knife.rb  -k clien
