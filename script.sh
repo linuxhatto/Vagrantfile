@@ -1,1 +1,1 @@
-mkdir -p ~/chef-repo/./chef
+mkdir -p ~/chef-repo/.chef
