@@ -4,4 +4,9 @@ Vagrant.configure(2) do |config|
     vb.memory = 512
     vb.cpus = 1
   end
+  
+  config.vm.provision "chef_client" do |chef|
+    chef.chef_server_url = "https://192.168.99.102/organizations"
+    chef.validation_key_path = "validation.pem"
+  end
   end
