@@ -3,6 +3,8 @@ cd ~
 git clone https://github.com/linuxhatto/Vagrantfile.git
 mkdir -p ~/chef-repo/.chef
 cp ~/Vagrantfile/chef-repo/fabio.pem ~/chef-repo/.chef
+cp ~/Vagrantfile/chef-repo/level3-validator.pem ~/chef-repo/.chef
+
 cat <<EOK > ~/chef-repo/.chef/knife.rb
 # See https://docs.getchef.com/config_rb_knife.html for more information on knife configuration options
 
