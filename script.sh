@@ -17,4 +17,8 @@ cookbook_path            ["#{current_dir}/../cookbooks"]
 validation_client_name   "level3-validator"
 EOK
 
+cat <<EOK >> /etc/hosts
+192.168.99.102 chef-master
+EOK
+
 chef-client -c /root/chef-repo/.chef/knife.rb  -k clien
