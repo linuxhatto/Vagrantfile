@@ -11,3 +11,4 @@ Vagrant.configure(2) do |config|
     v.vm.host_name = "chef-master"
   
   end
+end
