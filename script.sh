@@ -5,7 +5,7 @@ mkdir -p ~/chef-repo/.chef
 cp ~/Vagrantfile/chef-repo/fabio.pem ~/chef-repo/.chef
 mkdir -p /etc/chef
 cp ~/Vagrantfile/chef-repo/level3-validator.pem /etc/chef/validation.pem
-cp ~/Vagrantfile/chef-repo/.chef/knife.rb /etc/chef/client.rb
+cp ~/chef-repo/.chef/knife.rb /etc/chef/client.rb
 
 cat <<EOK > ~/chef-repo/.chef/knife.rb
 # See https://docs.getchef.com/config_rb_knife.html for more information on knife configuration options
