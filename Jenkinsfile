@@ -1,21 +1,13 @@
-pipeline {
-    agent any
+node {
+  // Mark the code checkout 'stage'....
+  stage 'Stage Checkout'
 
-    stages {
-        stage('Build') {
-            steps {
-                echo 'Building..'
-            }
-        }
-        stage('Test') {
-            steps {
-                echo 'Testing..'
-            }
-        }
-        stage('Deploy') {
-            steps {
-                echo 'Deploying....'
-            }
-        }
-    }
+  // Checkout code from repository and update any submodules
+  checkout scm
+  echo "stage checkout"
+
+  stage 'Stage Build'
+
+  //branch name from Jenkins environment variables
+  echo "My branch is: ${env.BRANCH_NAME}"
 }
