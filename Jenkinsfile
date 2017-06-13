@@ -1,5 +1,5 @@
-node{
-    
+pipeline {
+    agent any
    stage('Destroy') {
             steps {
                 echo 'Destroy....'
