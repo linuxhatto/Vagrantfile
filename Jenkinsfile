@@ -1,8 +1,15 @@
 pipeline {
     agent any
-   stage('Destroy') {
+
+    stages {
+        stage('Build') {
             steps {
-                echo 'Destroy....'
+                echo 'Building..'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Testing..'
             }
         }
         stage('Deploy') {
@@ -11,3 +18,4 @@ pipeline {
             }
         }
     }
+}
