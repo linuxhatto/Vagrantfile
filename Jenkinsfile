@@ -1,9 +1,13 @@
 pipeline {
     agent any
     stages { 
-        stage('Example') {
+        stage('Checkout') {
             steps {
-                echo 'Hello World'
+                deleteDir()
+            }
+            stage('Deploy') {
+            steps {
+                sh 'git clone https://github.com/linuxhatto/Vagrantfile.git'
             }
         }
     }
