@@ -9,8 +9,7 @@ pipeline {
           stage('Deploy') {
             steps {
                 sh 'git clone https://github.com/linuxhatto/Vagrantfile.git'
-                sh 'cd Vagrantfile/'
-                sh 'vagrant up'
+                sh 'vagrant init'
             }
         }
     }
