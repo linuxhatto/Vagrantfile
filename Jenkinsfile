@@ -3,7 +3,7 @@ pipeline {
     stages { 
         stage('Checkout') {
             steps {
-                deleteDir()
+                echo 'teste'
             }
         }
           stage('Deploy') {
